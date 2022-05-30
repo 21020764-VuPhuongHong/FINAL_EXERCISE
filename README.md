@@ -47,11 +47,16 @@
     * ***Super Mushroom***  ![mushroom_red](https://user-images.githubusercontent.com/100524815/170914186-d971017a-8a43-4ce5-90e4-71e3a580f3af.png) ![mushroom_green](https://user-images.githubusercontent.com/100524815/170914253-8cad14cb-1ea7-4551-afe1-8dc900d5d010.png)  ![mushroom_purple](https://user-images.githubusercontent.com/100524815/170914282-08824216-a5b1-4c56-b9fe-0b3d9278ccbc.png) : Khi ăn được Super Mushroom, tùy vào loại nấm mà Mario có thể được cộng thêm 1 mạng hoặc trở thành Super Mario  ![mario_right6](https://user-images.githubusercontent.com/100524815/170979742-ddf2b973-13c2-4fe4-b164-395b22d2e2a7.png) - lớn gấp đôi kích thước ban đầu và có khả năng phá vỡ những viên gạch ở phía trên anh ấy. Khi bị sinh vật tấn công đụng trúng trong trạng thái Super Mario, Mario sẽ trở về kích thước bình thường chứ không chết.
     * ***Fire Flower***  ![flower1](https://user-images.githubusercontent.com/100524815/170915117-27378afc-d2bb-4cc1-b11e-e96ee448aa89.png) : Khi ăn được Fire Flower, Mario sẽ chuyển thành Fire Mario  ![mario_right26](https://user-images.githubusercontent.com/100524815/170979799-ff6df352-23a3-4214-aba4-ff5e7ff3d4b8.png) - có khả năng bắn ra các quả cầu lửa để tiêu diệt kẻ thù. Khi bị sinh vật tấn công đụng trúng trong trạng thái này, Mario cũng sẽ trở về kích thước bình thường chứ không chết.
     * ***Super Star***  ![star3](https://user-images.githubusercontent.com/100524815/170915565-0eb29523-7d02-40a9-9451-6289489b6efa.png) : Khi ăn được Super Star, Mario sẽ chuyển sang trạng thái Immortal (bất tử) và dễ dàng tiêu diệt kẻ thù bằng cách đơn giản là chạm vào chúng, tuy nhiên trạng thái này chỉ là tạm thời và sẽ hết tác dụng sau một thời gian ngắn. 
-  * Các hiệu ứng khác đã cài đặt: hạ cờ khi hoàn thành màn chơi, phá hủy cây cầu có boss ở level cuối của Classic World, pháo hoa chúc mừng khi chiến thắng ở Custom World...
+  * Một số hiệu ứng từ Mario: chạy, nhảy, biến thành Super Mario, Fire Mario, Immortal Mario và từ các trạng thái trên trở về trạng thái thông thường, hiệu ứng "dying", bắn ra quả cầu lửa...
+  * Một số hiệu ứng từ các vật tấn công: chạy, nhảy, bay (tùy loại), ném bom, phóng hỏa tiễn tấn công Mario, hiệu ứng khi bị Mario đè bẹp, hiệu ứng khi bị quả cầu lửa từ Mario bắn trúng...
+  * Các hiệu ứng khác đã cài đặt: hạ cờ khi hoàn thành màn chơi, phá hủy cây cầu có boss ở level cuối của Classic World, pháo hoa chúc mừng khi chiến thắng ở Custom World, hiệu ứng tuyết rơi trong Winter World...
   * Game có nhạc nền và các hiệu ứng âm thanh khác.
   * Có hiển thị điểm số, số đồng xu đã thu thập được, level, số thời gian còn lại.
  ## 4. Các kỹ thuật lập trình được sử dụng trong chương trình
- 
+  * Thư viện SDL2: Sử dụng các chức năng của thư viện SDL2 để hiển thị hình ảnh, phát âm thanh, xử lý input từ chuột, bàn phím...
+  * Class: mỗi class quản lý một đối tượng (VD: class Player, class Coin, class Mushroom, class Star, class Flower, class Star, class Creature, class Turtle, class Boss, class Cloud, class Flag, class Fireball, class Screen, class World, class Level, class Movement, class Position, class KeyboardController, class SoundController, class MenuManager...)
+  * Con trỏ
+  * 
   
  
 
