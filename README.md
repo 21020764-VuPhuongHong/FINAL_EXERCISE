@@ -52,11 +52,16 @@
   * Các hiệu ứng khác đã cài đặt: hạ cờ khi hoàn thành màn chơi, phá hủy cây cầu có boss ở level cuối của Classic World, pháo hoa chúc mừng khi chiến thắng ở Custom World, hiệu ứng tuyết rơi trong Winter World...
   * Game có nhạc nền và các hiệu ứng âm thanh khác.
   * Có hiển thị điểm số, số đồng xu đã thu thập được, level, số thời gian còn lại.
- ## 4. Các kỹ thuật lập trình được sử dụng trong chương trình
+ ## 4. Các kỹ thuật lập trình được sử dụng
   * Thư viện SDL2: Sử dụng các chức năng của thư viện SDL2 để hiển thị hình ảnh, phát âm thanh, xử lý input từ chuột, bàn phím...
-  * Class: mỗi class quản lý một đối tượng (VD: class Player, class Coin, class Mushroom, class Star, class Flower, class Star, class Creature, class Turtle, class Boss, class Cloud, class Flag, class Fireball, class Screen, class World, class Level, class Movement, class Position, class KeyboardController, class SoundController, class MenuManager...)
+  * Kỹ thuật scroll backgrounds để di chuyển của nhân vật trở nên chân thực
+  * Chia code chương trình thành nhiều file (gồm header files và source files), mỗi file quản lý các thao tác liên quan đến đối tượng nhất định. 
+  * Class: mỗi class quản lý một đối tượng (VD: class Player, class Coin, class Mushroom, class Flower, class Star, class Creature, class Turtle, class Boss, class Cloud, class Flag, class Fireball, class Block, class Screen, class World, class Level, class Movement, class Position, class KeyboardController, class SoundController, class MenuManager...)
   * Con trỏ
-  * 
+  * Mảng array
+  * Mảng vector
+  * Cấu trúc map
+  * Xử lý ngoại lệ, hiển thị các lỗi khi chạy chương trình
   
  
 
