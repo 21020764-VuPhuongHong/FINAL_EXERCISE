@@ -57,12 +57,22 @@
   * Kỹ thuật scroll backgrounds để di chuyển của nhân vật trở nên chân thực
   * Chia code chương trình thành nhiều file (gồm header files và source files), mỗi file quản lý các thao tác liên quan đến đối tượng nhất định. 
   * Class: mỗi class quản lý một đối tượng (VD: class Player, class Coin, class Mushroom, class Flower, class Star, class Creature, class Turtle, class Boss, class Cloud, class Flag, class Fireball, class Block, class Screen, class World, class Level, class Movement, class Position, class KeyboardController, class SoundController, class MenuManager...)
+  * Enum class
   * Con trỏ
   * Mảng array
   * Mảng vector
   * Cấu trúc map
+  * Biến static, hàm static
+  * Hằng constexpr
+  * Sinh ngẫu nhiên
+  * Xử lý va chạm giữa các đối tượng
   * Xử lý ngoại lệ, hiển thị các lỗi khi chạy chương trình
-  
+ ## 5. Kết luận
+ ### *Nhìn chung, game chủ yếu dựa trên kiểm tra va chạm giữa các đối tượng để đưa ra các xử lý tương ứng.*
+ * Điều tâm đắc rút ra được sau khi hoàn thiện chương trình: 
+    * Trong quá trình làm game này, em được trau dồi, củng cố lại được những kiến thức lập trình cơ bản đã học, như hàm và truyền tham số, biến, vòng lặp, mảng, con trỏ, xâu..., tìm hiểu sâu hơn về lập trình hướng đối tượng, học cách sử dụng class để quản lý các đối tượng và làm quen với việc sử dụng thư viện đồ họa.
+    * Lần đầu phải code một dự án gồm nhiều đối tượng, nhiều tác vụ như vậy, em gặp phải rất nhiều bối rối và cả bế tắc, phải xử lý mất rất nhiều thời gian, từ đó em rút ra rằng khi lập trình cần phải có cách tiếp cận hiệu quả thì mới đảm bảo hiệu suất công việc được, không thể giữ thói quen code ngẫu hứng, tuần tự như khi thực hiện các bài tập nhỏ. *Trước khi bắt tay vào lập trình cần hình dung các đối tượng, các chức năng, tác vụ cần có trong chương trình, cũng như hình dung sự tương tác giữa các đối tượng và mối quan hệ giữa các tác vụ đó. Sau đó, cố gắng hệ thống lại thành một sơ đồ cấu trúc chương trình để dễ theo dõi. Ban đầu thực hiện lập trình từng phần của chương trình theo tiêu chí đơn giản, cơ bản, ráp nối các phần của chương trình lại thành một phiên bản sơ cấp để chạy thử, sửa các lỗi logic sau đó dần dần cải tiến, bổ sung các tính năng, tạo ra các phiên bản tốt hơn dựa trên phiên bản cũ.* - Đây là lần đầu tiên 
+ hướng phát triển  
  
 
 
