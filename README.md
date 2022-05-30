@@ -16,7 +16,26 @@
   ![image](https://user-images.githubusercontent.com/100524815/170909471-395a7ad2-b951-4dbd-90ce-85fb58a4f7a5.png)
   ![image](https://user-images.githubusercontent.com/100524815/170909562-eb65f6cc-1554-41e6-8db0-42ea380471f0.png)
 ### Mô tả chung:
-  * Kế thừa game Super Mario Bros cổ điển, trong phiên bản game này, người chơi sẽ nhập vai Mario vượt qua chặng đường đầy vực sâu, các chướng ngại vật và các sinh vật tấn công để giải cứu công chúa. Game có 2 chế độ để người chơi lựa chọn: Classic World và Custom World. <br>
+  * Kế thừa game Super Mario Bros cổ điển, trong phiên bản game này, người chơi sẽ nhập vai Mario vượt qua chặng đường đầy vực sâu, các chướng ngại vật và các sinh vật tấn công để giải cứu công chúa. 
+  * **Cách chơi:** Sử dụng các phím mũi tên [↑→↓←] để điều khiển Mario di chuyển, nhấn phím Spacebar để bắn ra quả cầu lửa khi ở chế độ Fire Mario.
+ ### Các ý tưởng chính: 
+  * Menu: cài đặt kích thước và vị trí cố định của các nút bấm, quản lý các tương tác giữa chuột với các nút bấm đó, tùy vào loại tương tác (di chuột vào khu vực nút, click chuột, nhả chuột...) mà quyết định các đối tượng sẽ được hiển thị tiếp theo và thiết lập chế độ game để bắt đầu chơi.
+  * Trong game:
+    * Căn chỉnh tọa độ, sắp xếp sao cho khi hiển thị ảnh của các đối tượng riêng lẻ khớp lại với nhau tạo thành bối cảnh game.
+    * Trong quá trình chơi, quản lý input từ bàn phím qua chức năng của thư viện SDL2, tùy vào phím mũi tên [→↑←] được nhấn mà thay đổi tọa độ hiển thị và hình ảnh các tư thế của Mario một cách thích hợp để tạo hiệu ứng đang chạy/ nhảy, nếu phím [↓] được nhấn khi Mario đang ở đúng vị trí phía trên đường ống thì thay đổi bối cảnh xuống đường hầm, nếu phím Spacebar được nhấn khi Mario đang ở trạng thái Fire Mario thì hiển thị quả cầu lửa bắn ra theo chiều ngang, hiệu ứng cháy nổ và kẻ thù bị tiêu diệt.
+    * Kiểm tra va chạm giữa các đối tượng trong game:
+      * Giữa Mario với các sinh vật tấn công, các chướng ngại vật là khối cứng không thể phá vỡ, các viên gạch có thể phá vỡ, các đồng xu, các vật phẩm đặc biệt và với cột cờ ở cuối mỗi màn... --> Xác định loại va chạm để trừ mạng, hiển thị hiệu ứng "dying", bắt đầu lại màn chơi hoặc cộng điểm, cộng xu, cộng mạng, thay đổi sang chế độ Super/ Fire/ Immortal Mario hoặc chuyển sang level tiếp theo...
+      * Giữa các sinh vật tấn công với quả cầu lửa của Mario, giữa các loại sinh vật tấn công với nhau, giữa sinh vật tấn công với khối gạch mà chúng đứng trên...
+      * Giữa vật phẩm đặc biệt với khối gạch mà chúng đứng trên... <br>
+      --> Tùy loại va chạm mà hiển thị các hiệu ứng.
+ ## 3. Các chức năng đã cài đặt <br> 
+  > Link video minh họa: https://youtu.be/IWLjU9hzgAg
+  * Menu của game gồm 4 nút bấm: 
+    * **PLAY**: Bắt đầu chơi
+    * **OPTIONS**: Mở ra Submenu để người chơi lựa chọn tốc độ game (mức độ nhanh dần từ 1 đến 9), chế độ chơi (CLASSIC WORLD/ CUSTOM WORLD) và bối cảnh của CUSTOM WORLD (WINTER WORLD/ SUMMER WORLD)
+    * **HELP**: Hướng dẫn cách chơi
+    * **EXIT**: Thoát game
+  * Game có 2 chế độ để người chơi lựa chọn: Classic World và Custom World. <br>
   **Chế độ Classic World gồm 4 level từ 1 đến 4**
   ![image](https://user-images.githubusercontent.com/100524815/170910561-9f2af373-88bf-4068-a934-d167836619f3.png) <br>
   **Chế độ Custom World có 2 bối cảnh để người chơi lựa chọn là: Winter World và Summer World**
@@ -27,18 +46,6 @@
     * ***Super Mushroom***  ![mushroom_red](https://user-images.githubusercontent.com/100524815/170914186-d971017a-8a43-4ce5-90e4-71e3a580f3af.png) ![mushroom_green](https://user-images.githubusercontent.com/100524815/170914253-8cad14cb-1ea7-4551-afe1-8dc900d5d010.png)  ![mushroom_purple](https://user-images.githubusercontent.com/100524815/170914282-08824216-a5b1-4c56-b9fe-0b3d9278ccbc.png) : Khi ăn được Super Mushroom, tùy vào loại nấm mà Mario có thể được cộng thêm 1 mạng hoặc trở thành Super Mario - lớn gấp đôi kích thước ban đầu và có khả năng phá vỡ những viên gạch ở phía trên anh ấy. Khi bị sinh vật tấn công đụng trúng trong trạng thái Super Mario, Mario sẽ trở về kích thước bình thường chứ không chết.
     * ***Fire Flower***  ![flower1](https://user-images.githubusercontent.com/100524815/170915117-27378afc-d2bb-4cc1-b11e-e96ee448aa89.png) : Khi ăn được Fire Flower, Mario sẽ chuyển thành Fire Mario - có khả năng bắn ra các quả cầu lửa để tiêu diệt kẻ thù.
     * ***Super Star***  ![star3](https://user-images.githubusercontent.com/100524815/170915565-0eb29523-7d02-40a9-9451-6289489b6efa.png) : Khi ăn được Super Star, Mario sẽ chuyển sang trạng thái Immortal (bất tử) và dễ dàng tiêu diệt kẻ thù bằng cách đơn giản là chạm vào chúng, tuy nhiên trạng thái này chỉ là tạm thời và sẽ hết tác dụng sau một thời gian ngắn. 
-  * **Cách chơi:** Sử dụng các phím mũi tên [↑→↓←] để điều khiển Mario di chuyển, nhấn phím Spacebar để bắn ra quả cầu lửa khi ở chế độ Fire Mario.
- ### Các ý tưởng chính: 
-  * Menu: cài đặt kích thước và vị trí cố định của các nút bấm, quản lý các tương tác giữa chuột với các nút bấm đó, tùy vào loại tương tác (di chuột vào khu vực nút, click chuột, nhả chuột...) mà quyết định các đối tượng sẽ được hiển thị tiếp theo và thiết lập chế độ game để bắt đầu chơi.
-  * Trong game:
-    * Căn chỉnh tọa độ, sắp xếp sao cho khi hiển thị ảnh của các đối tượng riêng lẻ khớp lại với nhau tạo thành bối cảnh game.
-    * Trong quá trình chơi, quản lý input từ bàn phím qua chức năng của thư viện SDL2, tùy vào phím mũi tên [→↑←] được nhấn mà thay đổi tọa độ hiển thị và hình ảnh các tư thế của Mario một cách thích hợp để tạo hiệu ứng đang chạy/ nhảy, nếu phím [↓] được nhấn khi Mario đang ở đúng vị trí phía trên đường ống thì thay đổi bối cảnh xuống đường hầm, nếu phím Spacebar được nhấn khi Mario đang ở trạng thái Fire Mario thì hiển thị quả cầu lửa bắn ra theo chiều ngang, hiệu ứng cháy nổ và kẻ thù bị tiêu diệt.
-    * Kiểm tra va chạm giữa các đối tượng trong game:
-      * Giữa Mario với các sinh vật tấn công, các chướng ngại vật là khối cứng không thể phá vỡ, các viên gạch có thể phá vỡ, các đồng xu, các vật phẩm đặc biệt và với cột cờ ở cuối mỗi màn... --> Xác định loại va chạm để trừ mạng, hiển thị hiệu ứng "dying", bắt đầu lại màn chơi hoặc cộng điểm, cộng xu, cộng mạng, thay đổi sang chế độ Super/ Fire/ Immortal Mario hoặc chuyển sang level tiếp theo...
-      * Giữa các sinh vật tấn công với quả cầu lửa của Mario, giữa các loại sinh vật tấn công với nhau, giữa sinh vật tấn công với khối gạch mà chúng đứng trên...
-      * Giữa vật phẩm đặc biệt với khối gạch mà chúng đứng trên...
-      --> Tùy loại va chạm mà hiển thị các hiệu ứng.
- ## 3. Các chức năng đã cài đặt <br>
   
  
 
