@@ -69,15 +69,15 @@
   * Xử lý ngoại lệ, hiển thị các lỗi khi chạy chương trình
  ## 5. Kết luận
  ### *Nhìn chung, game chủ yếu dựa trên kiểm tra va chạm giữa các đối tượng để đưa ra các xử lý tương ứng.*
- * Điều tâm đắc rút ra được sau khi hoàn thiện chương trình: 
+ * **Điều tâm đắc rút ra được sau khi hoàn thiện chương trình:** 
     * Trong quá trình làm game này, em được trau dồi, củng cố lại được những kiến thức lập trình cơ bản đã học, như hàm và truyền tham số, biến, vòng lặp, mảng, con trỏ, xâu..., tìm hiểu sâu hơn về lập trình hướng đối tượng, học cách sử dụng class để quản lý các đối tượng và làm quen với việc sử dụng thư viện đồ họa.
     * Lần đầu phải code một dự án gồm nhiều đối tượng, nhiều tác vụ như vậy, em gặp phải rất nhiều bối rối và cả bế tắc, phải xử lý mất rất nhiều thời gian, từ đó em rút ra rằng khi lập trình cần phải có cách tiếp cận hiệu quả thì mới đảm bảo hiệu suất công việc được, không thể giữ thói quen code ngẫu hứng, tuần tự như khi thực hiện các bài tập nhỏ. *Trước khi bắt tay vào lập trình cần hình dung các đối tượng, các chức năng, tác vụ cần có trong chương trình, cũng như hình dung sự tương tác giữa các đối tượng và mối quan hệ giữa các tác vụ đó. Sau đó, cố gắng hệ thống lại thành một sơ đồ cấu trúc chương trình để dễ theo dõi. Ban đầu thực hiện lập trình từng phần của chương trình theo tiêu chí đơn giản, cơ bản, ráp nối các phần của chương trình lại thành một phiên bản sơ cấp để chạy thử, sửa các lỗi logic sau đó dần dần cải tiến, bổ sung các tính năng, tạo ra các phiên bản tốt hơn dựa trên phiên bản cũ.* - Em thấy rằng cách tiếp cận này giúp tiết kiệm thời gian lập trình đáng kể và đảm bảo có được phiên bản chương trình chạy được để nâng cấp từ từ, hạn chế việc nản chí do phải code quá nhiều phần riêng lẻ phức tạp mà sau đó không biết phải liên kết, ráp nối chúng lại với nhau như thế nào dẫn đến không có được bản chương trình chạy được để đỡ bất an hơn khi deadline đến gần :<
     * Với một sinh viên năm nhất như em thì project lần này quả là rất dài và vì thế nó giúp em thấy được việc code sạch, đẹp, ngắn gọn, cô đọng, đặt tên hàm, tên biến phản ánh chức năng của nó, sử dụng hằng số, tránh magic number quan trọng như thế nào!
     * Qua lần này em càng thấy rõ hơn tầm quan trọng của tính kiên nhẫn và kỹ năng tự tìm hiểu thông tin, tìm cách fix bug qua internet (đặc biệt là tìm bằng tiếng Anh) đối với việc lập trình.
- * Về hạn chế: 
+ * **Về hạn chế:** 
     * Ảnh một số đối tượng trong game có độ phân giải thấp, chưa được rõ nét, đẹp mắt do nguồn ảnh khá khan hiếm, em chưa tìm được hình ảnh đẹp hơn để thay thế.
     * Một số file code trong project còn dài dòng, em vẫn chưa tìm được cách thích hợp để rút gọn, cải tiến.
- * Hướng phát triển:
+ * **Hướng phát triển:**
     * Cải tiến, rút ngắn code 
     * Cải tiến đồ họa đẹp hơn, thay thế các ảnh chưa được rõ nét
     * Thêm màn chơi, thêm lựa chọn bối cảnh cho Custom World
@@ -85,7 +85,7 @@
     * Thêm các loại sinh vật tấn công đa dạng hơn
     * Code chế độ nhiều người chơi
  ---
- Hình ảnh và âm thanh trong game này em lấy từ các nguồn trên mạng Internet và cắt, chỉnh sửa lại cho phù hợp
+ *Hình ảnh và âm thanh trong game này em lấy từ các nguồn trên mạng Internet và cắt, chỉnh sửa lại cho phù hợp*
  
 
 
