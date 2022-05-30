@@ -4,6 +4,8 @@
   * MSV: 21020764
 # Game Super Mario Bros (sử dụng thư viện SDL2)
 ## 1. Hướng dẫn cài đặt: cách lấy chương trình về và các câu lệnh, cài đặt để có thể chạy được chương trình
+* Cách 1: Download Mario_game_exe.rar trong repo này về và giải nén, chạy file MarioGame.exe trong đó để bắt đầu chơi
+* Cách 2:
   * Download MinGW-W64 compilers qua địa chỉ: https://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win64/Personal%20Builds/mingw-builds/8.1.0/threads-posix/seh/x86_64-8.1.0-release-posix-seh-rt_v6-rev0.7z/download (cần download chính xác bản này)
   * Cài đặt đường dẫn PATH đến `<ROOTDIR>\mingw64\bin` (VD: `C:\x86_64-8.1.0-release-posix-seh-rt_v6-rev0\mingw64\bin`)
   * Clone repo về qua câu lệnh: git clone https://github.com/21020764-VuPhuongHong/FINAL_EXERCISE.git
