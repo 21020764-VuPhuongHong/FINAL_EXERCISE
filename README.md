@@ -4,3 +4,4 @@
 * MSV: 21020764
 ## Game Super Mario Bros
 ### 1. Hướng dẫn cài đặt: cách lấy chương trình về và các câu lệnh, cài đặt để có thể chạy được chương trình
+* Clone repo về qua câu lệnh: git clone
