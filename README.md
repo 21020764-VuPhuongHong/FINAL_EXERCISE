@@ -8,7 +8,7 @@
 * Cách 2:
   * Download MinGW-W64 compilers qua địa chỉ: https://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win64/Personal%20Builds/mingw-builds/8.1.0/threads-posix/seh/x86_64-8.1.0-release-posix-seh-rt_v6-rev0.7z/download (cần download chính xác bản này)
   * Cài đặt đường dẫn PATH đến `<ROOTDIR>\mingw64\bin` (VD: `C:\x86_64-8.1.0-release-posix-seh-rt_v6-rev0\mingw64\bin`)
-  * Clone repo về qua câu lệnh: git clone https://github.com/21020764-VuPhuongHong/FINAL_EXERCISE.git
+  * Clone repo về qua câu lệnh: `git clone https://github.com/21020764-VuPhuongHong/FINAL_EXERCISE.git`
   * Trong Command Prompt, thay đổi đường dẫn đến thư mục Mario_Project trong thư mục FINAL_EXERCISE `(<ROOTDIR>\FINAL_EXERCISE\Mario_Project)`
   * Chạy chương trình bằng câu lệnh `mingw32-make` hoặc gõ trực tiếp lệnh: `g++ -Iinclude -Llib source/*.cpp -o MarioGame -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer`
   * Sau khi biên dịch thành công, gõ lệnh `MarioGame.exe` (hoặc `.\MarioGame.exe`) để chạy game
