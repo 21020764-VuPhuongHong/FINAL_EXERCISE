@@ -1,6 +1,4 @@
 #include "Screen.h"
-
-#include <thread>
 #include "SoundController.h"
 #include "Player.h"
 #include "Camera.h"
@@ -8,6 +6,7 @@
 #include "World.h"
 #include "LayoutStyle.h"
 #include "FileNotLoadedException.h"
+#include <thread>
 
 
 bool Screen::coinImage = true;
@@ -36,11 +35,13 @@ int Screen::computeDifference() const
 	return (player->getX() - camera->getBeginningOfCamera() - (SCREEN_WIDTH - camera->getReferencePoint()));
 }
 
+//Cai dat thoi gian cho cac man choi
 int Screen::getInitialTime() const
 {
 	if (level == 3 || level == 4) {
 		return 300;
 	}
+	//77, 88 la Custom World
 	else if (level == 77 || level == 88) {
 		return 600;
 	}
@@ -49,6 +50,7 @@ int Screen::getInitialTime() const
 	}
 }
 
+//Tinh thoi gian con lai
 int Screen::computeTime() const
 {
 	auto timePoint = std::chrono::steady_clock::now();
@@ -183,6 +185,7 @@ void Screen::fillBackground(int scrollingOffset)
 	}
 }
 
+//Hien thi man hinh "press enter to continue"
 void Screen::drawPressEnterScreen()
 {
 	setBlackBackground();
@@ -190,18 +193,16 @@ void Screen::drawPressEnterScreen()
 	updateView();
 
 	SDL_Event event;
-	while (true) {
-		SDL_PollEvent(&event);
+	while (SDL_PollEvent(&event)) {
 		if (event.type == SDL_KEYDOWN) {
-			char keyDown = event.key.keysym.scancode;
-
-			if (keyDown == SDL_SCANCODE_RETURN) {
+			if (event.key.keysym.scancode == SDL_SCANCODE_RETURN) {
 				break;
 			}
 		}
 	}
 }
 
+//Cac thong so o tren cung man hinh trong suot qua trinh choi game
 void Screen::drawScreenElements()
 {
 	SDL_Surface* marioImg = screenImages[0];
@@ -214,6 +215,7 @@ void Screen::drawScreenElements()
 	drawSurface(display, timeImg, SCREEN_WIDTH - 100, 19);
 }
 
+//Man hinh mo dau moi level/ world
 void Screen::drawStartScreenElements(int lives)
 {
 	SDL_Surface* worldImg = (level == 77 || level == 88 ? worldImages[9] : worldImages[4 + level]);
@@ -241,6 +243,7 @@ void Screen::drawTimeUp()
 	drawSurface(display, img, 310, 200);
 }
 
+//Hien thi thoi gian con lai
 void Screen::drawTime(long long int time)
 {
 	std::string timeStr = std::to_string(time);
@@ -250,6 +253,7 @@ void Screen::drawTime(long long int time)
 	}
 }
 
+//Hien thi diem so
 void Screen::drawPoints(int points)
 {
 	std::string pointsStr = std::to_string(points);
@@ -266,6 +270,7 @@ void Screen::drawPoints(int points)
 	}
 }
 
+//Hien thi so dong xu da thu thap duoc
 void Screen::drawCoins(int coins)
 {
 	SDL_Surface* img1, * img2;
@@ -289,6 +294,7 @@ void Screen::drawCoins(int coins)
 	drawSurface(display, img2, 286, 40);
 }
 
+//Hien thi loi cam on va thong bao khi nguoi choi chien thang custom world
 void Screen::drawCustomWorldThankYouScreen(World &world, int level, int bgScrollingOffset)
 {
 	for (int i = 0; i < 1000; ++i) {
@@ -322,6 +328,7 @@ void Screen::drawThankYouInscriptions(int i)
 	}
 }
 
+//Loi cam on va thong bao khi nguoi choi chien thang classic world
 void Screen::drawThankYouScreen(World &world, int bgScrollingOffset)
 {
 	for (int i = 0; i < 1600; ++i) {
@@ -346,19 +353,17 @@ int Screen::initGUI()
 
 	IMG_Init(IMG_INIT_JPG | IMG_INIT_PNG);
 	
-	int status = SDL_CreateWindowAndRenderer(Screen::SCREEN_WIDTH, Screen::SCREEN_HEIGHT, SDL_WINDOW_SHOWN | SDL_WINDOW_RESIZABLE, &window, &renderer);
+	int status = SDL_CreateWindowAndRenderer(Screen::SCREEN_WIDTH, Screen::SCREEN_HEIGHT, SDL_WINDOW_SHOWN, &window, &renderer);
 
 	display = SDL_CreateRGBSurface(0, SCREEN_WIDTH, SCREEN_HEIGHT, 32, 0x00FF0000, 0x0000FF00, 0x000000FF, 0xFF000000);
 
 	SDL_SetHint(SDL_HINT_RENDER_SCALE_QUALITY, "linear");
 	SDL_RenderSetLogicalSize(renderer, SCREEN_WIDTH, SCREEN_HEIGHT);
 	SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
-
 	SDL_SetWindowTitle(window, "Super Mario Bros");
 
 	scrtex = SDL_CreateTexture(renderer, SDL_PIXELFORMAT_ARGB8888, SDL_TEXTUREACCESS_STREAMING, SCREEN_WIDTH, SCREEN_HEIGHT);
 
-	//SDL_ShowCursor(SDL_DISABLE);
 	return status;
 }
 

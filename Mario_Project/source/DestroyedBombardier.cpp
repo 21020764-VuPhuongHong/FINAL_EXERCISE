@@ -1,7 +1,7 @@
 #include "DestroyedBombardier.h"
-
 #include "SDL_Utility.h"
 
+//Hien thi sinh vat nem bom bi tieu diet
 
 std::array<SDL_Surface*, 2> DestroyedBombardier::destroyedBombardierImages;
 

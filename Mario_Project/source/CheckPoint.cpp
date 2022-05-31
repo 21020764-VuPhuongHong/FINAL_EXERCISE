@@ -1,5 +1,4 @@
 #include "CheckPoint.h"
-
 #include "Player.h"
 
 
@@ -25,10 +24,9 @@ unsigned int CheckPoint::getMark() const
 bool CheckPoint::isPlayerInRangeOfCheckPoint(const Player &player) const
 {
 	if ((player.getX() >= position.getX() - horizontalRange && player.getX() <= position.getX() + horizontalRange)
-		&& (player.getY() >= position.getY() - verticalRange && player.getY() <= position.getY() + verticalRange)) {
-
+		&& (player.getY() >= position.getY() - verticalRange && player.getY() <= position.getY() + verticalRange)) 
+	{
 		return true;
 	}
-
 	return false;
 }

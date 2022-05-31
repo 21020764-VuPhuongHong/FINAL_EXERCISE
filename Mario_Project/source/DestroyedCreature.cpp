@@ -1,10 +1,10 @@
 #include "DestroyedCreature.h"
-
 #include "SDL_Utility.h"
 #include "World.h"
 #include "LayoutStyle.h"
 #include "UtilityFunctions.h"
 
+//Hien thi sinh vat tan cong bi tieu diet do bi qua cau lua cua Mario ban trung
 
 std::array<SDL_Surface*, 8> DestroyedCreature::destroyedCreatureImages;
 

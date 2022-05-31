@@ -28,6 +28,7 @@
 #include "Snowflake.h"
 #include "RandomGenerator.h"
 
+//Sap xep hien thi boi canh cua cac level trong cac world
 
 bool Level::summerHiddenStageChecker = false;
 

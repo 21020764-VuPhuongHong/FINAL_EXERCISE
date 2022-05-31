@@ -358,6 +358,7 @@ void runGame()
 
 	int initStatus = screen.getInitStatus();
 	if (initStatus) {
+		//Do cai dat trong class Screen nen khi initStatus == 2 tuc la da show file error window roi
 		if (initStatus != 2) {							
 			showScreenErrorWindow();
 		}

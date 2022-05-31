@@ -1,6 +1,7 @@
 #include "AnimatedCoin.h"
 #include "SDL_Utility.h"
 
+//Cac dong xu bay len khi Mario nhay len danh vao cac vien gach chua dong xu
 
 std::array<SDL_Surface*, 7> AnimatedCoin::animatedCoinImages;
 

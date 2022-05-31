@@ -1,5 +1,4 @@
 #include "FireSerpent.h"
-
 #include "SDL_Utility.h"
 
 
@@ -34,6 +33,7 @@ void FireSerpent::loadFireSerpentImages(SDL_Surface* display)
 	}
 }
 
+//Thay doi vi tri hien thi de tao hieu ung con ran lua chuyen dong thanh vong tron
 void FireSerpent::move()
 {
 	++auxiliaryCounter;

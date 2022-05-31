@@ -1,9 +1,9 @@
 #include "CrushedCreature.h"
-
 #include "SDL_Utility.h"
 #include "World.h"
 #include "LayoutStyle.h"
 
+//Hien thi sinh vat tan cong bi Mario de bep
 
 std::array<SDL_Surface*, 4> CrushedCreature::crushedCreatureImages;
 

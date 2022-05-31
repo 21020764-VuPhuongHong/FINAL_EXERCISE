@@ -47,9 +47,7 @@ void Movement::setDirection(Direction direction)
 
 void Movement::setVerticalDirection(Direction verticalDirection)
 {
-	if (verticalDirection == Direction::Up || verticalDirection == Direction::Down 
-		|| verticalDirection == Direction::None) {
-
+	if (verticalDirection == Direction::Up || verticalDirection == Direction::Down || verticalDirection == Direction::None) {
 		this->verticalDirection = verticalDirection;
 	}
 }

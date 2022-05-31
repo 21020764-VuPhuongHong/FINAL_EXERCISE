@@ -2,7 +2,7 @@
 
 #include "SDL_Utility.h"
 
-
+//Diem so/ text (1UP) bay len khi an duoc vat pham bonus, tieu diet ke thu...
 std::array<SDL_Surface*, 6> AnimatedText::animatedTextImages;
 
 int AnimatedText::computeImageIndex() const

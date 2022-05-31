@@ -118,6 +118,7 @@ void Player::changeStateDuringAnimation()
 	}
 }
 
+//Hieu ung lon len
 void Player::performGrowingAnimation(int difference)
 {
 	movementBlock = true;
@@ -164,6 +165,7 @@ void Player::performGrowingAnimation(int difference)
 	}
 }
 
+//Hieu ung nho lai
 void Player::performShrinkingAnimation(int difference)
 {
 	if (difference <= 100 && lastDifference < 10) {
@@ -179,6 +181,7 @@ void Player::performShrinkingAnimation(int difference)
 	}
 }
 
+//Fire Mario
 void Player::performArmingAnimation(int difference)
 {
 	movementBlock = true;
@@ -205,6 +208,7 @@ void Player::performArmingAnimation(int difference)
 	}
 }
 
+//Bat tu
 void Player::performImmortalAnimation(int difference)
 {
 	if (isDifferenceInInterval(difference, 0, 600, 20)) {
@@ -228,6 +232,7 @@ void Player::performImmortalAnimation(int difference)
 	}
 }
 
+//Bat tu nhung o kich thuoc binh thuong
 void Player::performSmallImmortalAnimation(int difference)
 {
 	if (isDifferenceInInterval(difference, 0, 600, 20)) {

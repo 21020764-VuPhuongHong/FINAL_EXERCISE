@@ -72,6 +72,7 @@ SDL_Surface* Block::getImage() const
 	return (type == BlockType::Land ? landImages[computeLandImageIndex()] : blockImages[computeImageIndex()]);
 }
 
+//Khong co nhieu y nghia ngoai cho biet kich thuoc
 Size Block::getSizeFromBlockType()
 {
 	switch (type) {
@@ -152,21 +153,25 @@ void Block::loadBlockImages(SDL_Surface* display)
 	loadLandImages(display);
 }
 
+//Chua dong xu
 bool Block::hasCoins() const
 {
 	return (availableCoins > 0);
 }
 
+//Co the bi pha vo
 bool Block::canBeHitted() const
 {
 	return (position.getY() == initialPositionY);
 }
 
+//Co the va cham voi vat pham bonus
 bool Block::canCollideWithBonuses() const
 {
 	return collisionsFlag;
 }
 
+//Vo hinh
 bool Block::isInvisible() const
 {
 	if (type == BlockType::BonusWithOneUpMushroom && World::LAYOUT_STYLE == LayoutStyle::OpenWorld) {

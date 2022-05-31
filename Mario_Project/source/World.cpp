@@ -86,6 +86,7 @@ bool World::isLastTouchedBlockBonus() const
 	return false;
 }
 
+//Thay doi mau sac tao hieu ung dong xu lap lanh, nut nhan pha huy cau nhap nhay...
 void World::changeColors()
 {
 	auto timePoint = std::chrono::steady_clock::now();
@@ -96,6 +97,7 @@ void World::changeColors()
 	Button::changeButtonImage();
 }
 
+//Xoa cac doi tuong tam thoi sau mot thoi gian hien thi
 void World::deleteTemporaryElements()
 {
 	for (std::size_t i = 0; i < temporaryElements.size(); ++i) {
@@ -128,6 +130,7 @@ void World::handleFireballStatus()
 	}
 }
 
+//Di chuyen vat bonus, xoa vat bonus khi no di chuyen ra khoi world (man hinh) ma Mario van chua an duoc
 void World::performBonusElementsActions()
 {
 	for (std::size_t i = 0; i < bonuses.size(); ++i) {
@@ -138,6 +141,7 @@ void World::performBonusElementsActions()
 	}
 }
 
+//Cac bieu dien lien quan den npcs
 void World::performNpcsActions()
 {
 	for (std::size_t i = 0; i < npcs.size(); ++i) {
@@ -301,18 +305,15 @@ void World::subtractCoinFromBlock()
 void World::createNewBonus()
 {
 	if (blocks[lastTouchedBlockIndex].getType() == BlockType::BonusWithRedMushroom) {
-		bonuses.push_back(std::make_shared<Mushroom>(Mushroom(Position(
-			blocks[lastTouchedBlockIndex].getPosition()), false)));
+		bonuses.push_back(std::make_shared<Mushroom>(Mushroom(Position(blocks[lastTouchedBlockIndex].getPosition()), false)));
 		blocks[lastTouchedBlockIndex].setType(BlockType::Empty);
 	}
 	else if (blocks[lastTouchedBlockIndex].getType() == BlockType::BonusWithFlower) {
-		if (player->isSmall()) {
-			bonuses.push_back(std::make_shared<Mushroom>(Mushroom(Position(
-				blocks[lastTouchedBlockIndex].getPosition()), false)));
+		if (player->isSmall()) {bonuses.push_back(std::make_shared<Mushroom>(Mushroom(Position(
+			blocks[lastTouchedBlockIndex].getPosition()), false)));
 		}
 		else {
-			bonuses.push_back(std::make_shared<Flower>(Flower(Position(
-				blocks[lastTouchedBlockIndex].getPosition()))));
+			bonuses.push_back(std::make_shared<Flower>(Flower(Position(blocks[lastTouchedBlockIndex].getPosition()))));
 		}
 		blocks[lastTouchedBlockIndex].setType(BlockType::Empty);
 	}

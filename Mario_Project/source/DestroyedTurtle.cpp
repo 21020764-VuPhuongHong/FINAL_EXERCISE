@@ -1,5 +1,4 @@
 #include "DestroyedTurtle.h"
-
 #include "SDL_Utility.h"
 #include "World.h"
 #include "LayoutStyle.h"

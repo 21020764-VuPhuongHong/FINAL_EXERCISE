@@ -1,9 +1,9 @@
 #include "Shards.h"
-
 #include "SDL_Utility.h"
 #include "World.h"
 #include "LayoutStyle.h"
 
+//Hieu ung nhung manh gach vo ban ra khi Mario pha vien gach
 
 std::array<SDL_Surface*, 6> Shards::shardsImages;
 

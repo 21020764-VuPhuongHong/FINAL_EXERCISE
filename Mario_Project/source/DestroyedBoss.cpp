@@ -1,7 +1,7 @@
 #include "DestroyedBoss.h"
-
 #include "SDL_Utility.h"
 
+//Hieu ung boss bi tieu diet (do cau bi pha huy, roi xuong ho dung nham)
 
 std::array<SDL_Surface*, 6> DestroyedBoss::destroyedBossImages;
 

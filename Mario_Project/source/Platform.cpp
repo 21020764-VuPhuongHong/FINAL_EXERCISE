@@ -1,5 +1,4 @@
 #include "Platform.h"
-
 #include "Player.h"
 #include "CollisionHandling.h"
 #include "World.h"
@@ -9,6 +8,7 @@
 
 std::array<SDL_Surface*, 6> Platform::platformImages;
 
+//Xac dinh loai platform giup thuc day chuyen dong (tao da) cho Mario, trong do loai bridge khong lam duoc nhu vay
 bool Platform::shouldForcePlayerMovement() const
 {
 	if (playerForceMovementChecker && (platformType == PlatformType::MovingHorizontallyPlatform 
@@ -59,6 +59,7 @@ void Platform::drawPlatform(SDL_Surface* display, int beginningOfCamera, int end
 	}
 }
 
+//Hien thi cay cau bang cach xep lien tiep cac vat lieu lam cau ben canh nhau va hien thi neo cau (span) o cuoi
 void Platform::drawBridge(SDL_Surface* display, int beginningOfCamera, int endOfCamera) const
 {
 	if (isWithinRangeOfCamera(beginningOfCamera, endOfCamera)) {
@@ -74,6 +75,7 @@ void Platform::drawBridge(SDL_Surface* display, int beginningOfCamera, int endOf
 	}
 }
 
+//Hieu ung di chuyen xuong
 void Platform::slideDown()
 {
 	position.setY(position.getY() + 1);
@@ -109,6 +111,7 @@ void Platform::slideUpDown()
 	
 }
 
+//Hieu ung di chuyen theo chieu ngang
 void Platform::slideHorizontally()
 {
 	++slideCounter;
@@ -190,6 +193,7 @@ void Platform::slide(Player &player)
 	}
 }
 
+//Giam dan do dai cay cau nham tao hieu ung pha cau
 void Platform::reduceBridge()
 {
 	if (platformType == PlatformType::Bridge) {

@@ -1,7 +1,7 @@
 #include "Explosion.h"
-
 #include "SDL_Utility.h"
 
+//Hieu ung no (dam lua chay no to dan theo thoi gian)
 
 std::array<SDL_Surface*, 3> Explosion::explosionImages;
 
